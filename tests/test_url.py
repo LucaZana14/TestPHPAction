@@ -53,6 +53,11 @@ def test_url():
     # much cleaner.
     
     ignore_urls = [
+        "https://www.virtualbox.org/",
+        "https://medium.com/@masjadaan/oracle-padding-attack-a61369993c86",
+        "https://www.golinuxcloud.com/brute-force-attack-web-forms",
+        "https://hacks.mozilla.org/2020/08/changes-to-samesite-cookie-behavior/",
+        "https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/",
         "https://wpscan.com/", # Cloudflare doesn't like GitHub checking it
         "http://www.w3.org/TR/html4/loose.dtd", # Don't need to check the DTD
         "https://www.vmware.com/", # Throwing a 403 for some reason, but can't see it going anywhere

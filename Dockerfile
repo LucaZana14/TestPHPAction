@@ -17,3 +17,6 @@ RUN apt-get update \
 
 COPY --chown=www-data:www-data . .
 COPY --chown=www-data:www-data config/config.inc.php.dist config/config.inc.php
+
+# Nel Dockerfile
+ENV APP_CLIENT_SECRET=""

@@ -81,9 +81,10 @@ class LoginController
 			array_key_exists ("PHP_AUTH_PW", $_SERVER)) {
 			$client_id = $_SERVER['PHP_AUTH_USER'];
 			$client_secret = $_SERVER['PHP_AUTH_PW'];
+			$expected_secret = getenv('APP_CLIENT_SECRET');
 
 			# App auth check
-			if ($client_id == "1471.dvwa.digi.ninja" && $client_secret == "ABigLongSecret") {
+			if ($client_id == "1471.dvwa.digi.ninja" && $client_secret === $expected_secret) {
 
 				if (array_key_exists ("grant_type", $_POST)) {
 					switch ($_POST['grant_type']) {

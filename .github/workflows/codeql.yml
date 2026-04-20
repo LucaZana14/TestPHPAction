@@ -26,7 +26,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: php, javascript
+          languages: javascript
           # Usiamo le query estese per una protezione maggiore
           queries: security-extended
 

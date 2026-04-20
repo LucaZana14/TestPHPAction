@@ -58,6 +58,7 @@ def test_url():
         "https://www.golinuxcloud.com/brute-force-attack-web-forms",
         "https://hacks.mozilla.org/2020/08/changes-to-samesite-cookie-behavior/",
         "https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/",
+        "https://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password",
         "https://wpscan.com/", # Cloudflare doesn't like GitHub checking it
         "http://www.w3.org/TR/html4/loose.dtd", # Don't need to check the DTD
         "https://www.vmware.com/", # Throwing a 403 for some reason, but can't see it going anywhere

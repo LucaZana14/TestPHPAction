@@ -1,0 +1,22 @@
+name: Semgrep SAST
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  semgrep:
+    name: Analisi del codice
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Clona la repository
+        uses: actions/checkout@v4
+
+      - name: Esegui Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          # Questo comando dice a Semgrep di usare le regole di sicurezza standard per PHP, JS, ecc.
+          config: "p/default"

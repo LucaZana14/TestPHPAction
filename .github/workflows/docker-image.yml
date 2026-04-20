@@ -6,6 +6,8 @@ on:
     branches: [main]
 
 jobs:
+  
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -19,6 +21,9 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name : Build and push DVWA image
+
+    
+
       run: |
         IMAGE_ID=ghcr.io/${{ github.repository_owner }}/dvwa
         IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
@@ -34,3 +39,7 @@ jobs:
         docker image tag dvwa $IMAGE_ID:$COMMIT
         docker image push $IMAGE_ID:$VERSION
         docker image push $IMAGE_ID:$COMMIT
+
+    permissions:
+      contents: read
+      packages: write

@@ -22,8 +22,9 @@ if( !array_key_exists( $selectedDocId, $docs ) ) {
 	$selectedDocId = 'readme';
 }
 $readFile = $docs[ $selectedDocId ][ 'file' ];
+$safe_file = basename($readFile); 
+$instructions = file_get_contents( DVWA_WEB_PAGE_TO_ROOT . $safe_file );
 
-$instructions = file_get_contents( DVWA_WEB_PAGE_TO_ROOT.$readFile );
 
 if ($docs[ $selectedDocId ]['type'] == "markdown") {
 	$parsedown = new ParseDown();

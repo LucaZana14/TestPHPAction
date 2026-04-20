@@ -1,0 +1,8 @@
+rules:
+  - id: fix-password-pdo
+    languages: [php]
+    severity: ERROR
+    message: "Rilevata password in chiaro. Uso di getenv() suggerito."
+    pattern: new PDO($DSN, $USER, "$PWD")
+    # Il fix definisce come deve essere trasformato il codice
+    fix: new PDO($DSN, $USER, getenv('DB_PASSWORD'))

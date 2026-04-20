@@ -19,4 +19,4 @@ jobs:
         uses: returntocorp/semgrep-action@v1
         with:
           # Questo comando dice a Semgrep di usare le regole di sicurezza standard per PHP, JS, ecc.
-          config: "p/default"
+          config: "p/default .semgrep/"

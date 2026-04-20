@@ -1,0 +1,29 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarqube:
+    name: SonarCloud Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fondamentale per SonarQube per analizzare la cronologia dei commit
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Generato automaticamente da GitHub
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}   # Il segreto che hai creato tu
+        with:
+          args: >
+            -Dsonar.projectKey=lucazana14
+            -Dsonar.organization=LucaZana14
+            -Dsonar.sources=.
+            -Dsonar.php.exclusions=**/vendor/**

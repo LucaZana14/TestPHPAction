@@ -6,40 +6,58 @@ on:
     branches: [main]
 
 jobs:
-  
-
   build:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Login to GitHub Container Registry
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name : Build and push DVWA image
-
     
-
-      run: |
-        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/dvwa
-        IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-        VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-        [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-        [ "$VERSION" == "master" ] && VERSION=latest
-        COMMIT=$(echo "${{ github.sha }}" | cut -c 1-7)
-        echo IMAGE_ID=$IMAGE_ID
-        echo VERSION=$VERSION
-        echo COMMIT=$COMMIT
-        docker image build --tag dvwa .
-        docker image tag dvwa $IMAGE_ID:$VERSION
-        docker image tag dvwa $IMAGE_ID:$COMMIT
-        docker image push $IMAGE_ID:$VERSION
-        docker image push $IMAGE_ID:$COMMIT
-
+    # Fondamentale: i permessi devono stare dentro il job
     permissions:
       contents: read
       packages: write
+      security-events: write # Permette a Trivy di pubblicare i report se necessario
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build local Docker image
+        run: |
+          # Costruiamo l'immagine localmente per poterla scansionare
+          docker build -t dvwa-local:latest .
+
+      # --- STEP TRIVY: Scansioniamo prima di fare il push ---
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'dvwa-local:latest'
+          format: 'table'
+          exit-code: '1' # Se trova vulnerabilità critiche, ferma tutto qui
+          ignore-unfixed: true
+          severity: 'HIGH,CRITICAL'
+
+      # --- STEP PUSH: Solo se Trivy ha dato il via libera ---
+      - name: Tag and Push DVWA image
+        run: |
+          IMAGE_ID=ghcr.io/${{ github.repository_owner }}/dvwa
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          
+          # Gestione versione (branch o tag)
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          [ "$VERSION" == "main" ] && VERSION=latest
+          COMMIT=$(echo "${{ github.sha }}" | cut -c 1-7)
+          
+          echo "Pushing to $IMAGE_ID with version $VERSION and commit $COMMIT"
+          
+          # Taggiamo l'immagine locale per il registro remoto
+          docker tag dvwa-local:latest $IMAGE_ID:$VERSION
+          docker tag dvwa-local:latest $IMAGE_ID:$COMMIT
+          
+          # Invio al registro
+          docker push $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$COMMIT

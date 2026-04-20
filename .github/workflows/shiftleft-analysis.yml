@@ -14,6 +14,12 @@ jobs:
   Scan-Build:
     # Scan runs on ubuntu, mac and windows
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read      # Per leggere il codice
+      security-events: write # PERMETTE L'UPLOAD DEI REPORT SARIF (Indispensabile!)
+      actions: read       # Per coordinarsi con il workflo
+
     steps:
     - uses: actions/checkout@v3
       with:

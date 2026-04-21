@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
+# 1. AGGIUNTO: Permessi necessari per la Tab Security e per leggere il codice
+permissions:
+  security-events: write
+  contents: read
+  actions: read
+
 jobs:
   gitleaks:
     name: Caccia ai Segreti
@@ -14,22 +20,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # CRITICO: fetch-depth 0 scarica TUTTA la cronologia. 
-          # Se metti 1, Gitleaks vedrebbe solo l'ultimo commit e 
-          # ignorerebbe i segreti nascosti nei commit passati.
           fetch-depth: 0
 
       - name: Gitleaks Scan
+        # Usiamo l'id per referenziarlo dopo se serve
+        id: gitleaks
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Genera il file per la tab Security
+          # Usiamo il percorso assoluto della workspace per sicurezza
           report_format: sarif
-          report_path: gitleaks.sarif
+          report_path: ${{ github.workspace }}/gitleaks.sarif
 
-      - name: Upload Gitleaks SARIF
+      - name: Carica i risultati nella Tab Security
+        # Aggiornato a v4 come richiesto dal 2026
         uses: github/codeql-action/upload-sarif@v4 
+        # Carica il file solo se esiste davvero
+        if: always() 
         with:
-          sarif_file: gitleaks.sarif
-        if: always() # Carica i risultati anche se il job fallisce (perché ha trovato segreti)
+          sarif_file: ${{ github.workspace }}/gitleaks.sarif

@@ -9,7 +9,9 @@ $page = dvwaPageNewGrab();
 $page[ 'title' ] = 'Blind SQL Injection Cookie Input' . $page[ 'title_separator' ].$page[ 'title' ];
 
 if( isset( $_POST[ 'id' ] ) ) {
-	setcookie( 'id', $_POST[ 'id' ]);
+
+	$id= preg_replace('/[^a-zA-z0-9_-]/','',$_POST['id']);
+	setcookie( 'id', $id);
 	$page[ 'body' ] .= "Cookie ID set!<br /><br /><br />";
 	$page[ 'body' ] .= "<script>window.opener.location.reload(true);</script>";
 }

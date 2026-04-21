@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="vulnerabilities/api/gen_openapi.php">
+    <UndefinedClass>
+      <code><![CDATA[\OpenApi\Generator]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="vulnerabilities/api/help/help.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['SERVER_NAME']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/api/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/12-API_Testing/00-API_Testing_Overview', "OWASP WSTG API Testing Overview" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://portswigger.net/bappstore/6bf7574b632847faaaa4eb5e42f1757c', "Burp OpenAPI Parser" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://swagger.io/tools/swagger-ui/', "Swagger UI" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.postman.com/', "Postman" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.zaproxy.org/docs/desktop/addons/openapi-support/', "ZAP OpenAPI Support" )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/api/public/index.php">
+    <PossiblyNullArgument>
+      <code><![CDATA[$_SERVER['REQUEST_URI']]]></code>
+    </PossiblyNullArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER["REQUEST_METHOD"]]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_URI']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/api/source/low.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/api/source/medium.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['PHP_SELF']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/api/src/GenericController.php">
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+    </PossiblyUndefinedVariable>
+  </file>
+  <file src="vulnerabilities/api/src/HealthController.php">
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+    </PossiblyUndefinedVariable>
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Get]]></code>
+      <code><![CDATA[OAT\Get]]></code>
+      <code><![CDATA[OAT\Post]]></code>
+      <code><![CDATA[OAT\Post]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+    </UndefinedAttributeClass>
+  </file>
+  <file src="vulnerabilities/api/src/Helpers.php">
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$response]]></code>
+    </PossiblyUndefinedVariable>
+  </file>
+  <file src="vulnerabilities/api/src/LoginController.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$refresh_token]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+    </PossiblyUndefinedVariable>
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Post]]></code>
+      <code><![CDATA[OAT\Post]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+    </UndefinedAttributeClass>
+  </file>
+  <file src="vulnerabilities/api/src/Order.php">
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+    </UndefinedAttributeClass>
+  </file>
+  <file src="vulnerabilities/api/src/OrderController.php">
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+    </PossiblyUndefinedVariable>
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Delete]]></code>
+      <code><![CDATA[OAT\Get]]></code>
+      <code><![CDATA[OAT\Get]]></code>
+      <code><![CDATA[OAT\Post]]></code>
+      <code><![CDATA[OAT\Put]]></code>
+      <code><![CDATA[OAT\SecurityScheme]]></code>
+    </UndefinedAttributeClass>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->version]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->version]]></code>
+      <code><![CDATA[$this->version]]></code>
+      <code><![CDATA[$this->version]]></code>
+      <code><![CDATA[$this->version]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="vulnerabilities/api/src/Token.php">
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+    </UndefinedAttributeClass>
+  </file>
+  <file src="vulnerabilities/api/src/User.php">
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Property]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+      <code><![CDATA[OAT\Schema]]></code>
+    </UndefinedAttributeClass>
+  </file>
+  <file src="vulnerabilities/api/src/UserController.php">
+    <InvalidAttribute>
+      <code><![CDATA[OAT\Tag]]></code>
+      <code><![CDATA[OAT\Tag]]></code>
+      <code><![CDATA[OAT\Tag]]></code>
+    </InvalidAttribute>
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+    </PossiblyUndefinedVariable>
+    <UndefinedAttributeClass>
+      <code><![CDATA[OAT\Contact]]></code>
+      <code><![CDATA[OAT\Delete]]></code>
+      <code><![CDATA[OAT\Get]]></code>
+      <code><![CDATA[OAT\Get]]></code>
+      <code><![CDATA[OAT\Info]]></code>
+      <code><![CDATA[OAT\Post]]></code>
+      <code><![CDATA[OAT\Put]]></code>
+      <code><![CDATA[OAT\Server]]></code>
+      <code><![CDATA[OAT\Tag]]></code>
+      <code><![CDATA[OAT\Tag]]></code>
+      <code><![CDATA[OAT\Tag]]></code>
+      <code><![CDATA[OAT\Tag]]></code>
+    </UndefinedAttributeClass>
+  </file>
+  <file src="vulnerabilities/authbypass/change_user_details.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/authbypass/get_user_data.php">
+    <InvalidScalarArgument>
+      <code><![CDATA[$row[1]]]></code>
+      <code><![CDATA[$row[2]]]></code>
+    </InvalidScalarArgument>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/authbypass/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/authbypass/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/authbypass/source/high.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/authbypass/source/impossible.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/authbypass/source/medium.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/brute/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA', 'CAPTCHA' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Password_cracking' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/brute/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/Brute_force_attack' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.golinuxcloud.com/brute-force-attack-web-forms' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/brute/source/high.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$pass]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$user]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyNullArrayAccess>
+      <code><![CDATA[$row["avatar"]]]></code>
+    </PossiblyNullArrayAccess>
+    <RedundantCondition>
+      <code><![CDATA[$result]]></code>
+    </RedundantCondition>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/brute/source/impossible.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$pass]]></code>
+      <code><![CDATA[$user]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/brute/source/low.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$pass]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyNullArrayAccess>
+      <code><![CDATA[$row["avatar"]]]></code>
+    </PossiblyNullArrayAccess>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/brute/source/medium.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyNullArrayAccess>
+      <code><![CDATA[$row["avatar"]]]></code>
+    </PossiblyNullArrayAccess>
+    <RedundantCondition>
+      <code><![CDATA[$result]]></code>
+    </RedundantCondition>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/captcha/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA', 'CAPTCHA' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/captcha/index.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.google.com/recaptcha/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.google.com/recaptcha/admin/create' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[recaptcha_get_html( $_DVWA[ 'recaptcha_public_key' ] )]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$_DVWA]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/captcha/source/high.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'HTTP_USER_AGENT' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+      <code><![CDATA[recaptcha_check_answer(
+		$_DVWA[ 'recaptcha_private_key' ],
+		$_POST['g-recaptcha-response']
+	)]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/captcha/source/impossible.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$pass_conf]]></code>
+      <code><![CDATA[$pass_curr]]></code>
+      <code><![CDATA[$pass_new]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+      <code><![CDATA[recaptcha_check_answer(
+		$_DVWA[ 'recaptcha_private_key' ],
+		$_POST['g-recaptcha-response']
+	)]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/captcha/source/low.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidCast>
+      <code><![CDATA[$pass_conf]]></code>
+      <code><![CDATA[$pass_new]]></code>
+    </PossiblyInvalidCast>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[recaptcha_check_answer(
+		$_DVWA[ 'recaptcha_private_key'],
+		$_POST['g-recaptcha-response']
+	)]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/captcha/source/medium.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidCast>
+      <code><![CDATA[$pass_conf]]></code>
+      <code><![CDATA[$pass_new]]></code>
+    </PossiblyInvalidCast>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[recaptcha_check_answer(
+		$_DVWA[ 'recaptcha_private_key' ],
+		$_POST['g-recaptcha-response']
+	)]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/cryptography/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation', "Wikipedia - Block cipher mode of operation" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Padding_%28cryptography%29', "Wikipedia - Padding (cryptography)")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Padding_oracle_attack', "Padding oracle attack")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/XOR_cipher', "XOR Cipher")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://exploit-notes.hdks.org/exploit/cryptography/algorithm/aes-ecb-padding-attack', "AES-ECB Padding Attack" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://gchq.github.io/CyberChef/', "CyberChef")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://medium.com/@masjadaan/oracle-padding-attack-a61369993c86', "Oracle Padding Attack")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://robertheaton.com/2013/07/29/padding-oracle-attack/', "The Padding Oracle Attack")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.101computing.net/xor-encryption-algorithm/', "XOR Encryption Algorithm")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.nccgroup.com/us/research-blog/cryptopals-exploiting-cbc-padding-oracles/', "Cryptopals: Exploiting CBC Padding Oracles - Best article")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.scottbrady91.com/cryptopals/implementing-and-breaking-aes-ecb', "Implementing and breaking AES ECB")]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://yurichev.org/pkcs7/', "[Crypto] PKCS#7 padding")]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/cryptography/source/check_token_high.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['CONTENT_TYPE']]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/cryptography/source/check_token_impossible.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['CONTENT_TYPE']]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/cryptography/source/ecb_attack.php">
+    <ForbiddenCode>
+      <code><![CDATA[var_dump ($hacked_deciphered)]]></code>
+      <code><![CDATA[var_dump ($p1)]]></code>
+      <code><![CDATA[var_dump ($p2)]]></code>
+      <code><![CDATA[var_dump ($p3)]]></code>
+      <code><![CDATA[var_dump ($p4)]]></code>
+      <code><![CDATA[var_dump ($soo_plaintext)]]></code>
+      <code><![CDATA[var_dump ($sooty_plaintext)]]></code>
+      <code><![CDATA[var_dump ($sweep_plaintext)]]></code>
+      <code><![CDATA[var_dump ($user)]]></code>
+      <code><![CDATA[var_dump (bin2hex($c))]]></code>
+      <code><![CDATA[var_dump (bin2hex($soo_ciphered))]]></code>
+      <code><![CDATA[var_dump (bin2hex($sooty_ciphered))]]></code>
+      <code><![CDATA[var_dump (bin2hex($sweep_ciphered))]]></code>
+    </ForbiddenCode>
+  </file>
+  <file src="vulnerabilities/cryptography/source/low.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$message]]></code>
+      <code><![CDATA[$message]]></code>
+      <code><![CDATA[$password]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['PHP_SELF']]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <TypeDoesNotContainType>
+      <code><![CDATA[$messages != ""]]></code>
+    </TypeDoesNotContainType>
+  </file>
+  <file src="vulnerabilities/cryptography/source/medium.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$token]]></code>
+      <code><![CDATA[$token]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['PHP_SELF']]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/cryptography/source/oracle_attack.php">
+    <ForbiddenCode>
+      <code><![CDATA[var_dump ($exp)]]></code>
+      <code><![CDATA[var_dump ($ret_obj)]]></code>
+    </ForbiddenCode>
+    <InvalidArrayOffset>
+      <code><![CDATA[$new_clear[$i]]]></code>
+    </InvalidArrayOffset>
+    <InvalidScalarArgument>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+    </InvalidScalarArgument>
+  </file>
+  <file src="vulnerabilities/cryptography/source/token_library_high.php">
+    <InvalidArrayOffset>
+      <code><![CDATA[$users[$id]]]></code>
+    </InvalidArrayOffset>
+    <PossiblyFalseArgument>
+      <code><![CDATA[$data_array]]></code>
+      <code><![CDATA[$data_array]]></code>
+    </PossiblyFalseArgument>
+  </file>
+  <file src="vulnerabilities/cryptography/source/token_library_impossible.php">
+    <InvalidArrayOffset>
+      <code><![CDATA[$users[$id]]]></code>
+    </InvalidArrayOffset>
+    <PossiblyFalseArgument>
+      <code><![CDATA[$data_array]]></code>
+      <code><![CDATA[$data_array]]></code>
+    </PossiblyFalseArgument>
+  </file>
+  <file src="vulnerabilities/cryptography/source/xor_theory.php">
+    <ForbiddenCode>
+      <code><![CDATA[var_dump ($b64_encoded)]]></code>
+      <code><![CDATA[var_dump ($decoded)]]></code>
+    </ForbiddenCode>
+  </file>
+  <file src="vulnerabilities/csp/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/', "Mozilla Security Blog - CSP for the web we have" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://content-security-policy.com/', "Content Security Policy Reference" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP', "Mozilla Developer Network - CSP: script-src")]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/csp/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/', "Mozilla Security Blog - CSP for the web we have" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://content-security-policy.com/', "Content Security Policy Reference" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP', "Mozilla Developer Network - CSP: script-src")]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/csp/source/high.php">
+    <PossiblyInvalidOperand>
+      <code><![CDATA[$_POST['include']]]></code>
+    </PossiblyInvalidOperand>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csp/source/impossible.php">
+    <PossiblyInvalidOperand>
+      <code><![CDATA[$_POST['include']]]></code>
+    </PossiblyInvalidOperand>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csp/source/jsonp.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_GET['callback']]]></code>
+    </PossiblyInvalidArgument>
+  </file>
+  <file src="vulnerabilities/csp/source/low.php">
+    <PossiblyInvalidOperand>
+      <code><![CDATA[$_POST['include']]]></code>
+    </PossiblyInvalidOperand>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csp/source/medium.php">
+    <PossiblyInvalidOperand>
+      <code><![CDATA[$_POST['include']]]></code>
+    </PossiblyInvalidOperand>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csrf/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/csrf' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/csrf/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Cross-site_request_forgery ' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/csrf' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.cgisecurity.com/csrf-faq.html' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csrf/source/high.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$pass_conf]]></code>
+      <code><![CDATA[$pass_new]]></code>
+      <code><![CDATA[$pass_new]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$token]]></code>
+    </PossiblyUndefinedVariable>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $token, $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csrf/source/impossible.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$pass_curr]]></code>
+      <code><![CDATA[$pass_new]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csrf/source/low.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csrf/source/medium.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyNullArgument>
+      <code><![CDATA[$_SERVER[ 'HTTP_REFERER' ]]]></code>
+      <code><![CDATA[$_SERVER[ 'SERVER_NAME' ]]]></code>
+    </PossiblyNullArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'HTTP_REFERER' ]]]></code>
+      <code><![CDATA[$_SERVER[ 'SERVER_NAME' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/csrf/test_credentials.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$pass]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$user]]></code>
+    </PossiblyInvalidArgument>
+    <RedundantCondition>
+      <code><![CDATA[$result]]></code>
+    </RedundantCondition>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSourceHtmlEcho( $page )]]></code>
+      <code><![CDATA[messagesPopAllToHtml()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/exec/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/Command_Injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.trim.php', 'trim()' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/exec/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'http://www.ss64.com/bash/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'http://www.ss64.com/nt/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/Command_Injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.scribd.com/doc/2530476/Php-Endangers-Remote-Code-Execution' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/exec/source/high.php">
+    <ForbiddenCode>
+      <code><![CDATA[shell_exec( 'ping  ' . escapeshellarg($target) )]]></code>
+      <code><![CDATA[shell_exec( 'ping  -c 4 ' . escapeshellarg($target) )]]></code>
+    </ForbiddenCode>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_REQUEST[ 'ip' ]]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/exec/source/impossible.php">
+    <ForbiddenCode>
+      <code><![CDATA[shell_exec( 'ping  ' . escapeshellarg($target) )]]></code>
+      <code><![CDATA[shell_exec( 'ping  -c 4 ' . escapeshellarg($target) )]]></code>
+    </ForbiddenCode>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$target]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/exec/source/low.php">
+    <ForbiddenCode>
+      <code><![CDATA[shell_exec( 'ping  ' . escapeshellarg($target) )]]></code>
+      <code><![CDATA[shell_exec( 'ping  -c 4 ' . escapeshellarg($target) )]]></code>
+    </ForbiddenCode>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$target]]></code>
+      <code><![CDATA[$target]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/exec/source/medium.php">
+    <ForbiddenCode>
+      <code><![CDATA[shell_exec( 'ping  ' . escapeshellarg($target) )]]></code>
+      <code><![CDATA[shell_exec( 'ping  -c 4 ' . escapeshellarg($target) )]]></code>
+    </ForbiddenCode>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$target]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/fi/file1.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'REMOTE_ADDR' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Remote_File_Inclusion', 'Wikipedia - File inclusion vulnerability' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion', 'WSTG - Local File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion', 'WSTG - Remote File Inclusion' )]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/fi/file2.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Remote_File_Inclusion', 'Wikipedia - File inclusion vulnerability' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion', 'WSTG - Local File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion', 'WSTG - Remote File Inclusion' )]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/fi/file3.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'HTTP_HOST' ]]]></code>
+      <code><![CDATA[$_SERVER[ 'HTTP_USER_AGENT' ]]]></code>
+      <code><![CDATA[$_SERVER[ 'REMOTE_ADDR' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaCurrentUser()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Remote_File_Inclusion', 'Wikipedia - File inclusion vulnerability' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion', 'WSTG - Local File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion', 'WSTG - Remote File Inclusion' )]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/fi/file4.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/fi/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Remote_File_Inclusion', 'Wikipedia - File inclusion vulnerability' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/vulnerabilities/PHP_File_Inclusion', 'PHP File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion', 'WSTG - Local File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion', 'WSTG - Remote File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/wrappers.php', 'PHP Streams' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/fi/include.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Remote_File_Inclusion', 'Wikipedia - File inclusion vulnerability' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion', 'WSTG - Local File Inclusion' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion', 'WSTG - Remote File Inclusion' )]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/fi/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/fi/source/high.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$file]]></code>
+    </PossiblyInvalidArgument>
+  </file>
+  <file src="vulnerabilities/fi/source/medium.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$file]]></code>
+    </PossiblyInvalidArgument>
+  </file>
+  <file src="vulnerabilities/javascript/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.w3schools.com/js/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.youtube.com/playlist?list=PLC9K7uaDMdAUNktlDTxsmj6rJBf4Q9TR5' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.youtube.com/watch?v=8UqHCrGdxOM' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/javascript/index.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://ponyfoo.com/articles/es6-proxies-in-depth' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.w3schools.com/js/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/javascript/source/high.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/javascript/source/low.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/javascript/source/medium.php">
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$page]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/open_redirect/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Password_cracking' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/open_redirect/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html', "OWASP Unvalidated Redirects and Forwards Cheat Sheet" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://cwe.mitre.org/data/definitions/601.html', "Mitre - CWE-601: URL Redirection to Untrusted Site ('Open Redirect')" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/04-Testing_for_Client-side_URL_Redirect', "WSTG - Testing for Client-side URL Redirect")]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/open_redirect/source/info.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html', "OWASP Unvalidated Redirects and Forwards Cheat Sheet" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://cwe.mitre.org/data/definitions/601.html', "Mitre - CWE-601: URL Redirection to Untrusted Site ('Open Redirect')" )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/04-Testing_for_Client-side_URL_Redirect', "WSTG - Testing for Client-side URL Redirect")]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.mysql-real-escape-string.php', 'mysql_real_escape_string()' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/SQL_Injection' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/sqli/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://bobby-tables.com/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/SQL_injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/SQL_Injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$number_of_rows]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli/session-input.php">
+    <PossiblyInvalidCast>
+      <code><![CDATA[$_SESSION[ 'id' ]]]></code>
+    </PossiblyInvalidCast>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSourceHtmlEcho( $page )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/sqli/source/high.php">
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$sqlite_db]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli/source/impossible.php">
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli/source/low.php">
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_REQUEST[ 'id' ]]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$sqlite_db]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli/source/medium.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyNullArrayAccess>
+      <code><![CDATA[mysqli_fetch_row( $result )[0]]]></code>
+    </PossiblyNullArrayAccess>
+    <PossiblyUndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </PossiblyUndefinedGlobalVariable>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$sqlite_db]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli/test.php">
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$database]]></code>
+    </PossiblyUndefinedVariable>
+    <UndefinedFunction>
+      <code><![CDATA[mssql_connect($host, $username, $password)]]></code>
+      <code><![CDATA[mssql_fetch_array($result)]]></code>
+      <code><![CDATA[mssql_query($query)]]></code>
+      <code><![CDATA[mssql_select_db($database)]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/sqli_blind/cookie-input.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_POST['id']]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSourceHtmlEcho( $page )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/sqli_blind/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/Blind_SQL_Injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.mysql-real-escape-string.php', 'mysql_real_escape_string()' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/sqli_blind/index.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyNullArrayAccess>
+      <code><![CDATA[mysqli_fetch_row( $result )[0]]]></code>
+    </PossiblyNullArrayAccess>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://bobby-tables.com/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/SQL_injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/Blind_SQL_Injection' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli_blind/source/high.php">
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'SERVER_PROTOCOL' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli_blind/source/impossible.php">
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'SERVER_PROTOCOL' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$db]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli_blind/source/low.php">
+    <InvalidArgument>
+      <code><![CDATA[$stmt]]></code>
+      <code><![CDATA[$stmt]]></code>
+      <code><![CDATA[$stmt]]></code>
+    </InvalidArgument>
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_GET[ 'id' ]]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER[ 'SERVER_PROTOCOL' ]]]></code>
+    </PossiblyUndefinedArrayOffset>
+    <TypeDoesNotContainNull>
+      <code><![CDATA[is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))]]></code>
+    </TypeDoesNotContainNull>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/sqli_blind/source/medium.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <InvalidGlobal>
+      <code><![CDATA[global $sqlite_db_connection;]]></code>
+    </InvalidGlobal>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$result]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedConstant>
+      <code><![CDATA[MYSQL]]></code>
+      <code><![CDATA[SQLITE]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$_DVWA]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/upload/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.phpinfo.php', 'phpinfo()' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.system.php', 'system()' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/upload/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$PHPUploadPath]]></code>
+      <code><![CDATA[$PHPUploadPath]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/upload/source/high.php">
+    <PossiblyFalseOperand>
+      <code><![CDATA[strrpos( $uploaded_name, '.' )]]></code>
+    </PossiblyFalseOperand>
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/upload/source/impossible.php">
+    <PossiblyFalseOperand>
+      <code><![CDATA[strrpos( $uploaded_name, '.' )]]></code>
+    </PossiblyFalseOperand>
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/upload/source/low.php">
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/upload/source/medium.php">
+    <UndefinedConstant>
+      <code><![CDATA[DVWA_WEB_PAGE_TO_ROOT]]></code>
+    </UndefinedConstant>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/view_help.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_GET[ 'locale' ]]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaHelpHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/view_source.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_GET[ 'security' ]]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSourceHtmlEcho( $page )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/view_source_all.php">
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_GET[ 'id' ]]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSourceHtmlEcho( $page )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/weak_id/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html', 'OWASP Cheat Sheet - Session Management' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/01-Testing_for_Session_Management_Schema', 'WSTG - Session Management Schema' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/weak_id/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/weak_id/source/high.php">
+    <PossiblyNullArgument>
+      <code><![CDATA[$_SERVER['HTTP_HOST']]]></code>
+    </PossiblyNullArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['HTTP_HOST']]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/weak_id/source/impossible.php">
+    <PossiblyNullArgument>
+      <code><![CDATA[$_SERVER['HTTP_HOST']]]></code>
+    </PossiblyNullArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['HTTP_HOST']]]></code>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/weak_id/source/low.php">
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/weak_id/source/medium.php">
+    <InvalidScalarArgument>
+      <code><![CDATA[$cookie_value]]></code>
+    </InvalidScalarArgument>
+    <PossiblyUndefinedArrayOffset>
+      <code><![CDATA[$_SERVER['REQUEST_METHOD']]]></code>
+    </PossiblyUndefinedArrayOffset>
+  </file>
+  <file src="vulnerabilities/xss_d/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/xss_d/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/DOM_Based_XSS' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/xss/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.acunetix.com/blog/articles/dom-xss-explained/' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/xss_r/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.htmlspecialchars.php', 'htmlspecialchars()' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/xss_r/index.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Cross-site_scripting' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/xss/' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/xss-filter-evasion-cheatsheet' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.cgisecurity.com/xss-faq.html' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.scriptalert1.com/' )]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_r/source/high.php">
+    <PossiblyInvalidCast>
+      <code><![CDATA[$name]]></code>
+    </PossiblyInvalidCast>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_r/source/impossible.php">
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_r/source/low.php">
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_r/source/medium.php">
+    <PossiblyInvalidCast>
+      <code><![CDATA[$name]]></code>
+    </PossiblyInvalidCast>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_s/help/help.php">
+    <UndefinedFunction>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.htmlspecialchars.php', 'htmlspecialchars()' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)' )]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="vulnerabilities/xss_s/index.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <UndefinedFunction>
+      <code><![CDATA[dvwaDatabaseConnect()]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Cross-site_scripting' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/xss' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/xss-filter-evasion-cheatsheet' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.cgisecurity.com/xss-faq.html' )]]></code>
+      <code><![CDATA[dvwaExternalLinkUrlGet( 'https://www.scriptalert1.com/' )]]></code>
+      <code><![CDATA[dvwaGuestbook()]]></code>
+      <code><![CDATA[dvwaHtmlEcho( $page )]]></code>
+      <code><![CDATA[dvwaPageNewGrab()]]></code>
+      <code><![CDATA[dvwaPageStartup( array( 'authenticated' ) )]]></code>
+      <code><![CDATA[dvwaSecurityLevelGet()]]></code>
+      <code><![CDATA[tokenField()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$html]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_s/source/high.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_POST[ 'mtxMessage' ]]]></code>
+      <code><![CDATA[$_POST[ 'txtName' ]]]></code>
+    </PossiblyInvalidArgument>
+  </file>
+  <file src="vulnerabilities/xss_s/source/impossible.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_POST[ 'mtxMessage' ]]]></code>
+      <code><![CDATA[$_POST[ 'txtName' ]]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedFunction>
+      <code><![CDATA[checkToken( $_REQUEST[ 'user_token' ], $_SESSION[ 'session_token' ], 'index.php' )]]></code>
+      <code><![CDATA[generateSessionToken()]]></code>
+    </UndefinedFunction>
+    <UndefinedGlobalVariable>
+      <code><![CDATA[$db]]></code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="vulnerabilities/xss_s/source/low.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[(is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_POST[ 'mtxMessage' ]]]></code>
+      <code><![CDATA[$_POST[ 'txtName' ]]]></code>
+    </PossiblyInvalidArgument>
+  </file>
+  <file src="vulnerabilities/xss_s/source/medium.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+      <code><![CDATA[$GLOBALS["___mysqli_ston"]]]></code>
+    </ArgumentTypeCoercion>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$_POST[ 'mtxMessage' ]]]></code>
+      <code><![CDATA[$_POST[ 'txtName' ]]]></code>
+    </PossiblyInvalidArgument>
+  </file>
+</files>

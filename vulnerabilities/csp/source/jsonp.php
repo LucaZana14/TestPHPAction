@@ -2,7 +2,7 @@
 header("Content-Type: application/json; charset=UTF-8");
 
 if (array_key_exists ("callback", $_GET)) {
-	$callback = $_GET['callback'];
+	$callback = preg_replace('/[^a-zA-Z0-9_]/', '', $_GET['callback']);
 } else {
 	return "";
 }

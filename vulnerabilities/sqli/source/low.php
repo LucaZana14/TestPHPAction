@@ -11,22 +11,22 @@ if( isset( $_REQUEST[ 'Submit' ] ) ) {
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:
-			// Check database
-			$query  = "SELECT first_name, last_name FROM users WHERE user_id = '$id';";
-			$result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
+			$query  = "SELECT first_name, last_name FROM users WHERE user_id = ?;";
+			$stmt = mysqli_prepare($GLOBALS["___mysqli_ston"], $query);
 
-			// Get results
-			while( $row = mysqli_fetch_assoc( $result ) ) {
-				// Get values
-				$first = $row["first_name"];
-				$last  = $row["last_name"];
+			// 2. Colleghiamo la variabile $id (assumendo sia un intero "i" o stringa "s")
+			// Nota: anche se $id è tra apici nel codice originale, qui NON servono.
+			mysqli_stmt_bind_param($stmt, "i", $id);
 
-				// Feedback for end user
-				$html .= "<pre>ID: {$id}<br />First name: {$first}<br />Surname: {$last}</pre>";
+			try {
+				// 3. Eseguiamo lo statement
+				mysqli_stmt_execute($stmt);
+				// 4. Otteniamo i risultati
+				$result = mysqli_stmt_get_result($stmt);
+			} catch (Exception $e) {
+				// Gestione silenziosa degli errori per evitare info leakage
+				error_log($e->getMessage());
 			}
-
-			mysqli_close($GLOBALS["___mysqli_ston"]);
-			break;
 		case SQLITE:
 			global $sqlite_db_connection;
 

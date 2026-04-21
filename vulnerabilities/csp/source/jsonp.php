@@ -9,5 +9,10 @@ if (array_key_exists ("callback", $_GET)) {
 
 $outp = array ("answer" => "15");
 
-echo $callback . "(".json_encode($outp).")";
+// Permetti solo caratteri alfanumerici e underscore
+if (!preg_match('/^[a-zA-Z0-9_]+$/', $callback)) {
+    $callback = 'defaultCallback'; // Forza un nome sicuro se l'input è sospetto
+}
+
+echo $callback . "(" . json_encode($outp) . ")";
 ?>

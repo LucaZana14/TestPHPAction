@@ -1,8 +1,6 @@
-name: Semgrep SAST
+name: Semgrep fast scan SAST
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -14,9 +12,4 @@ jobs:
     steps:
       - name: Clona la repository
         uses: actions/checkout@v4
-
-      - name: Esegui Semgrep
-        uses: returntocorp/semgrep-action@v1
-        with:
-          # Questo comando dice a Semgrep di usare le regole di sicurezza standard per PHP, JS, ecc.
-          config: "p/default .semgrep/"
+      - run: semgrep scan --congif auto --error

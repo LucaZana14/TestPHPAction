@@ -2,8 +2,12 @@
 
 if( isset( $_COOKIE[ 'id' ] ) ) {
 	// Get input
-	$id = $_COOKIE[ 'id' ];
+	$id = basename($_COOKIE[ 'id' ]);
 	$exists = false;
+
+	if (!preg_match('/^[a-zA-Z0-9_-]+$/', $id)) {
+        die("Security Alert: Invalid ID format.");
+    }
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:

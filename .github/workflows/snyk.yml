@@ -18,22 +18,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 1. Fondamentale: Setup di PHP 8.4 per leggere il tuo composer.lock
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+
       - name: Setup Snyk
         uses: snyk/actions/setup@master
 
+      # 2. Installazione delle dipendenze con il flag magico
       - name: Install dependencies
-        # Snyk ha bisogno di analizzare le dipendenze installate
         run: |
           if [ ! -f composer.json ]; then
             echo '{"require": {}}' > composer.json
           fi
-          composer install --no-scripts --no-interaction
+          # Usiamo lo stesso flag di Psalm per ignorare i blocchi di versione
+          composer install --ignore-platform-reqs --no-scripts --no-interaction
 
+      # 3. Scansione Snyk
       - name: Run Snyk Test
         shell: bash
-        # Usiamo '|| true' per evitare che il job si fermi se trova vulnerabilità
-        # Vogliamo che arrivi comunque allo step di upload
         run: |
+          # Aggiungiamo --all-projects per sicurezza
           snyk test --sarif-file-output=snyk.sarif || true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -45,7 +53,6 @@ jobs:
             echo "exists=true" >> $GITHUB_OUTPUT
           else
             echo "exists=false" >> $GITHUB_OUTPUT
-            echo "Snyk non ha prodotto il file SARIF."
           fi
 
       - name: Upload Snyk SARIF

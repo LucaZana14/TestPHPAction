@@ -1,0 +1,43 @@
+name: Infrastructure Scanning (Checkov)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  security-events: write
+  contents: read
+
+jobs:
+  checkov:
+    name: Analisi Infrastruttura
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+      actions: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Esegui Checkov
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: .
+          framework: dockerfile
+          # Specifichiamo il formato
+          output_format: sarif
+          # Specifichiamo il NOME del file (non solo la cartella)
+          output_file_path: results.sarif
+          soft_fail: true 
+
+      - name: Carica i risultati su GitHub
+        # Usiamo v4 come richiesto dagli standard del 2026
+        uses: github/codeql-action/upload-sarif@v4
+        if: always() # Carica anche se ci sono fallimenti tecnici
+        with:
+          sarif_file: results.sarif

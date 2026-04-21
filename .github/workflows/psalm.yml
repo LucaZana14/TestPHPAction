@@ -1,0 +1,43 @@
+name: SAST - Psalm (PHP)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  security-events: write
+  contents: read
+
+jobs:
+  psalm-analysis:
+    name: Psalm Taint Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Install Psalm
+        # DVWA non ha un composer.json standard, quindi lo creiamo se manca
+        run: |
+          if [ ! -f composer.json ]; then
+            echo '{"require-dev": {"vimeo/psalm": "^5.0"}}' > composer.json
+          fi
+          composer install
+
+      - name: Run Psalm
+        # Generiamo il report SARIF per la Tab Security
+        run: ./vendor/bin/psalm --report=results.sarif
+        continue-on-error: true 
+
+      - name: Upload Psalm SARIF
+        uses: github/codeql-action/upload-sarif@v4
+        if: always()
+        with:
+          sarif_file: results.sarif

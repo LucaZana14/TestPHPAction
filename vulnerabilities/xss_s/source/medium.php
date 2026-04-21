@@ -14,11 +14,32 @@ if( isset( $_POST[ 'btnSign' ] ) ) {
 	$name = str_replace( '<script>', '', $name );
 	$name = ((isset($GLOBALS["___mysqli_ston"]) && is_object($GLOBALS["___mysqli_ston"])) ? mysqli_real_escape_string($GLOBALS["___mysqli_ston"],  $name ) : ((trigger_error("[MySQLConverterToo] Fix the mysql_escape_string() call! This code does not work.", E_USER_ERROR)) ? "" : ""));
 
-	// Update database
-	$query  = "INSERT INTO guestbook ( comment, name ) VALUES ( '$message', '$name' );";
-	$result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
+	// 1. Definiamo la query con i segnaposti '?' invece delle variabili
+	$query = "INSERT INTO guestbook ( comment, name ) VALUES ( ?, ? );";
+            
+	// Recuperiamo la connessione globale
+	$link = $GLOBALS["___mysqli_ston"];
 
-	//mysql_close();
+	// 2. Prepariamo lo statement
+	if ($stmt = mysqli_prepare($link, $query)) {
+		
+		// 3. Colleghiamo i parametri ("ss" significa due stringhe)
+		// Questo neutralizza ogni tentativo di SQL Injection
+		mysqli_stmt_bind_param($stmt, "ss", $message, $name);
+
+		// 4. Eseguiamo la query
+		$result = mysqli_stmt_execute($stmt);
+
+		if (!$result) {
+			// Gestione errore più pulita per compiacere Psalm
+			die( '<pre>' . mysqli_error($link) . '</pre>' );
+		}
+
+		// 5. Chiudiamo lo statement
+		mysqli_stmt_close($stmt);
+	} else {
+		die( '<pre>' . mysqli_error($link) . '</pre>' );
+	}
 }
 
 ?>

@@ -34,7 +34,7 @@ if( isset( $_COOKIE[ 'id' ] ) ) {
 		case SQLITE:
 			global $sqlite_db_connection;
 
-			$query  = "SELECT first_name, last_name FROM users WHERE user_id = ':id' LIMIT 1;";
+			$query  = "SELECT first_name, last_name FROM users WHERE user_id = :id LIMIT 1;";
 			$stmt = $sqlite_db_connection->prepare($query);
 			$stmt->bindValue(':id', $id, SQLITE3_INTEGER);
 			try {

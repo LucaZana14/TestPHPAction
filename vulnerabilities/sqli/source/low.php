@@ -33,10 +33,12 @@ if( isset( $_REQUEST[ 'Submit' ] ) ) {
 			#$sqlite_db_connection = new SQLite3($_DVWA['SQLITE_DB']);
 			#$sqlite_db_connection->enableExceptions(true);
 
-			$query  = "SELECT first_name, last_name FROM users WHERE user_id = '$id';";
+			$query  = "SELECT first_name, last_name FROM users WHERE user_id = :id;";
+			$stmt = $sqlite_db_connection->prepare($query);
+			$stmt->bindValue(':id', $id, SQLITE3_INTEGER);
 			#print $query;
 			try {
-				$results = $sqlite_db_connection->query($query);
+				$results = $stmt->execute();
 			} catch (Exception $e) {
 				echo 'Caught exception: ' . $e->getMessage();
 				exit();

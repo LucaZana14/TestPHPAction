@@ -9,7 +9,7 @@ $page = dvwaPageNewGrab();
 $page[ 'title' ] = 'Source' . $page[ 'title_separator' ].$page[ 'title' ];
 
 if (array_key_exists ("id", $_GET)) {
-	$id = $_GET[ 'id' ];
+	$id = basename($_GET[ 'id' ]);
 
 	if (!preg_match('/^[a-zA-Z0-9_-]+$/', $id)) {
         die("Security Alert: Invalid ID format.");

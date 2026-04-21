@@ -25,21 +25,26 @@ jobs:
           tools: composer:v2
 
       - name: Install Psalm
-        # DVWA non ha un composer.json standard, quindi lo creiamo se manca
+        # Risolviamo il conflitto tra il tuo Mac (8.4) e GitHub
         run: |
-          composer install --ignore-platform-reqs
+          # 1. Se manca il composer.json (progetto legacy), lo creiamo subito
           if [ ! -f composer.json ]; then
             echo '{"require-dev": {"vimeo/psalm": "^5.0"}}' > composer.json
           fi
-          composer install
+          
+          # 2. Eseguiamo un'UNICA installazione pulita
+          # Il flag --ignore-platform-reqs è vitale per evitare l'errore sulla versione PHP
+          composer install --ignore-platform-reqs --no-progress --no-interaction --no-scripts
 
       - name: Run Psalm
-        # Generiamo il report SARIF per la Tab Security
+        # Eseguiamo l'analisi usando la baseline che hai generato sul Mac
+        # continue-on-error permette di caricare i risultati anche se Psalm trova avvisi
         run: ./vendor/bin/psalm --report=results.sarif
         continue-on-error: true 
 
       - name: Upload Psalm SARIF
         uses: github/codeql-action/upload-sarif@v4
+        # Carichiamo il file SARIF anche se lo step precedente ha fallito
         if: always()
         with:
           sarif_file: results.sarif

@@ -9,8 +9,14 @@ $page = dvwaPageNewGrab();
 $page[ 'title' ] .= 'Source' . $page[ 'title_separator' ].$page[ 'title' ];
 
 if (array_key_exists ("id", $_GET) && array_key_exists ("security", $_GET)) {
-	$id       = $_GET[ 'id' ];
-	$security = $_GET[ 'security' ];
+	$id       = basename($_GET[ 'id' ]);
+	$security = basename($_GET[ 'security' ]);
+	if (!preg_match('/^[a-zA-Z0-9_-]+$/', $id)) {
+        die("Security Alert: Invalid ID format.");
+    }
+	if (!preg_match('/^[a-zA-Z0-9_-]+$/', $security)) {
+        die("Security Alert: Invalid ID format.");
+    }
 
 
 	switch ($id) {

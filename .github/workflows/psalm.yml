@@ -22,10 +22,12 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
+          tools: composer:v2
 
       - name: Install Psalm
         # DVWA non ha un composer.json standard, quindi lo creiamo se manca
         run: |
+          composer install --ignore-platform-reqs
           if [ ! -f composer.json ]; then
             echo '{"require-dev": {"vimeo/psalm": "^5.0"}}' > composer.json
           fi

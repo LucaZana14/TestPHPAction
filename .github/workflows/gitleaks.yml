@@ -1,0 +1,25 @@
+name: Secret Scanning (Gitleaks)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  gitleaks:
+    name: Caccia ai Segreti
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # CRITICO: fetch-depth 0 scarica TUTTA la cronologia. 
+          # Se metti 1, Gitleaks vedrebbe solo l'ultimo commit e 
+          # ignorerebbe i segreti nascosti nei commit passati.
+          fetch-depth: 0
+
+      - name: Gitleaks Scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

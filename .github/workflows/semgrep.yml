@@ -1,15 +1,37 @@
-name: Semgrep fast scan SAST
+name: Semgrep Fast Scan
 
 on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  security-events: write
+  contents: read
+
 jobs:
   semgrep:
-    name: Analisi del codice
+    name: Analisi Statica
     runs-on: ubuntu-latest
-    
+    # Usiamo direttamente il container ufficiale per evitare errori di parametri
+    container:
+      image: semgrep/semgrep 
+
     steps:
-      - name: Clona la repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - run: semgrep scan --congif auto --error
+
+      - name: Esegui scansione Semgrep
+        # --sarif: genera il formato per GitHub
+        # --output: salva i risultati in un file
+        run: |
+          semgrep scan \
+            --config p/php \
+            --config p/owasp-top-ten \
+            --sarif \
+            --output=semgrep.sarif
+
+      - name: Carica i risultati nella Tab Security
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: semgrep.sarif
+        if: always() # Carica i risultati anche se ci sono vulnerabilità

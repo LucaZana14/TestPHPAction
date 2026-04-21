@@ -12,9 +12,13 @@ if( isset( $_GET[ 'Submit' ] ) ) {
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:
 			// Check database
-			$query  = "SELECT first_name, last_name FROM users WHERE user_id = '$id';";
+			$query  = "SELECT first_name, last_name FROM users WHERE user_id = ?;";
+			$stmt= mysqli_query($GLOBALS["___mysqli_ston"],  $query );
+
+			mysqli_stmt_bind_param($stmt, "s" , $id);
 			try {
-				$result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ); // Removed 'or die' to suppress mysql errors
+				mysqli_stmt_execute($stmt);
+				$result =  mysqli_stmt_get_result($stmt);// Removed 'or die' to suppress mysql errors
 			} catch (Exception $e) {
 				print "There was an error.";
 				exit;

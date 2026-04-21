@@ -11,26 +11,41 @@ if( isset( $_COOKIE[ 'id' ] ) ) {
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:
-			// Check database
-			$query  = "SELECT first_name, last_name FROM users WHERE user_id = '$id' LIMIT 1;";
-			try {
-				$result = mysqli_query($GLOBALS["___mysqli_ston"],  $query ); // Removed 'or die' to suppress mysql errors
-			} catch (Exception $e) {
-				$result = false;
-			}
+			// 1. Prepariamo la query con il segnaposto '?'
+            $query  = "SELECT first_name, last_name FROM users WHERE user_id = ? LIMIT 1;";
+            
+            // 2. Prepariamo lo statement
+            $stmt = mysqli_prepare($GLOBALS["___mysqli_ston"], $query);
 
-			$exists = false;
-			if ($result !== false) {
-				// Get results
-				try {
-					$exists = (mysqli_num_rows( $result ) > 0); // The '@' character suppresses errors
-				} catch(Exception $e) {
-					$exists = false;
-				}
-			}
+            $exists = false;
 
-			((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
-			break;
+            if ($stmt) {
+                // 3. Colleghiamo il parametro (bind). 's' sta per string.
+                // Questo disarma qualsiasi tentativo di SQL Injection.
+                mysqli_stmt_bind_param($stmt, "s", $id);
+
+                try {
+                    // 4. Eseguiamo lo statement
+                    mysqli_stmt_execute($stmt);
+                    
+                    // 5. Otteniamo il set di risultati
+                    $result = mysqli_stmt_get_result($stmt);
+                    
+                    if ($result) {
+                        $exists = (mysqli_num_rows($result) > 0);
+                    }
+                } catch (Exception $e) {
+                    error_log($e->getMessage());
+                    $exists = false;
+                }
+                
+                // Chiudiamo lo statement
+                mysqli_stmt_close($stmt);
+            }
+
+            // Chiudiamo la connessione (mantenendo la logica originale di DVWA)
+            ((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
+            break;
 		case SQLITE:
 			global $sqlite_db_connection;
 

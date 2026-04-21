@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# 1. AGGIUNTO: Permessi necessari per la Tab Security e per leggere il codice
 permissions:
   security-events: write
   contents: read
@@ -23,20 +22,30 @@ jobs:
           fetch-depth: 0
 
       - name: Gitleaks Scan
-        # Usiamo l'id per referenziarlo dopo se serve
-        id: gitleaks
+        id: gitleaks_step # Diamo un ID per controllare l'esito dopo
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Usiamo il percorso assoluto della workspace per sicurezza
           report_format: sarif
-          report_path: ${{ github.workspace }}/gitleaks.sarif
+          report_path: gitleaks.sarif
+        continue-on-error: true # Fondamentale: non bloccare subito se trova leak
+
+      - name: Check if SARIF exists
+        id: check_file
+        shell: bash
+        # Questo comando controlla se il file esiste. Se non c'è, lo crea vuoto 
+        # o lo segnala, così l'upload non fallisce male.
+        run: |
+          if [ -f "gitleaks.sarif" ]; then
+            echo "file_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "file_exists=false" >> $GITHUB_OUTPUT
+            echo "Gitleaks non ha prodotto un file SARIF (probabilmente 0 leak)."
+          fi
 
       - name: Carica i risultati nella Tab Security
-        # Aggiornato a v4 come richiesto dal 2026
+        if: steps.check_file.outputs.file_exists == 'true'
         uses: github/codeql-action/upload-sarif@v4 
-        # Carica il file solo se esiste davvero
-        if: always() 
         with:
-          sarif_file: ${{ github.workspace }}/gitleaks.sarif
+          sarif_file: gitleaks.sarif

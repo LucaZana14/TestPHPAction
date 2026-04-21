@@ -2,8 +2,12 @@
 
 if( isset( $_GET[ 'Submit' ] ) ) {
 	// Get input
-	$id = $_GET[ 'id' ];
+	$id = basename($_GET[ 'id' ]);
 	$exists = false;
+
+	if (!preg_match('/^[a-zA-Z0-9_-]+$/', $id)) {
+        die("Security Alert: Invalid ID format.");
+    }
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:

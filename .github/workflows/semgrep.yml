@@ -1,6 +1,8 @@
 name: Semgrep Fast Scan
 
 on:
+  push:
+    branches: [ "main" ] # Gira quando fai push su main
   pull_request:
     branches: [ "main" ]
 
